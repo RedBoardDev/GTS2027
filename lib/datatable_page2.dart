@@ -42,17 +42,25 @@ List<DataColumn> _createColumns() {
 
 List<DataRow> _createRows() {
   return [
-    const DataRow(cells: [
-      DataCell(Text('Junoswap')),
-      DataCell(Text('100\$')),
-      DataCell(Text('200\$')),
-      DataCell(Text('100\$'))
+    DataRow(cells: <DataCell>[
+      DataCell(
+        TextFormField(
+          controller: TextEditingController(text: "Evmos"),
+        ),
+      ),
+      const DataCell(Text('100\$')),
+      const DataCell(Text('200\$')),
+      const DataCell(Text('100\$'))
     ]),
-    const DataRow(cells: [
-      DataCell(Text('Evmos')),
-      DataCell(Text('100\$')),
-      DataCell(Text('300\$')),
-      DataCell(Text('200\$'))
+    DataRow(cells: [
+      DataCell(
+        TextFormField(
+          controller: TextEditingController(text: "Juno-USDc"),
+        ),
+      ),
+      const DataCell(Text('100\$')),
+      const DataCell(Text('300\$')),
+      const DataCell(Text('200\$'))
     ]),
   ];
 }
